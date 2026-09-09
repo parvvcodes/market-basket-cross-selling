@@ -1,59 +1,29 @@
-# 🛒 Market Basket Analysis & Product Recommendation System
+# Market Basket Analysis & Cross-Selling Recommendation System
 
-## 📌 Overview
+A data-driven recommendation system that uses **Market Basket Analysis** and **Association Rule Mining** to identify relationships between products and generate **cross-selling recommendations** from grocery transaction data.
 
-This project performs **Market Basket Analysis** on a Blinkit grocery transaction dataset to identify customer purchasing patterns and discover products that are frequently purchased together.
+---
 
-The project uses **Apriori** and **FP-Growth** algorithms to generate frequent itemsets and association rules. These rules are then used to build a simple **Product Recommendation System** that recommends products based on a selected product.
+## Overview
 
-## 🎯 Objectives
+This project analyzes grocery transaction data to discover **customer purchasing patterns** and identify products that are frequently purchased together.
 
-- Analyze customer purchasing patterns.
-- Identify frequently purchased products.
-- Generate frequent itemsets using **Apriori** and **FP-Growth**.
-- Generate association rules using **Support, Confidence, and Lift**.
-- Build a product recommendation system.
-- Generate recommendations using both algorithms.
-- Combine recommendations and remove duplicate products.
+The system implements two popular frequent-itemset mining algorithms:
 
-## 📊 Dataset
+- **Apriori**
+- **FP-Growth**
 
-The project uses the **Blinkit grocery transaction dataset**.
+After identifying frequent itemsets, the project generates **association rules** using:
 
-### Dataset Features
+- **Support**
+- **Confidence**
+- **Lift**
 
-| Column | Description |
-|---|---|
-| `Transaction_ID` | Unique transaction identifier |
-| `Customer_ID` | Unique customer identifier |
-| `Date` | Transaction date |
-| `Product_ID` | Product identifier |
-| `Product_Name` | Name of the purchased product |
-| `Quantity` | Quantity purchased |
-| `Unit_Price` | Price per unit |
-| `Category` | Product category |
+These rules are then used to build a **product recommendation system**. The recommendations can be applied as a **cross-selling strategy** by suggesting complementary products that customers are likely to purchase along with their selected product.
 
-## 🔄 Project Workflow
+### Example
+
+If the analysis identifies the relationship:
 
 ```text
-Dataset
-   ↓
-Data Understanding
-   ↓
-Data Cleaning
-   ↓
-Create Transaction Basket
-   ↓
-Transaction Encoding
-   ↓
-Apriori Algorithm
-   ↓
-Apriori Association Rules
-   ↓
-FP-Growth Algorithm
-   ↓
-FP-Growth Association Rules
-   ↓
-Product Recommendation
-   ↓
-Final Recommendations
+WHITE BREAD → BUTTER
